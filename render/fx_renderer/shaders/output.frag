@@ -1,8 +1,6 @@
-#ifdef GL_FRAGMENT_PRECISION_HIGH
+// PQ exponentiation needs full fragment precision. mediump quantizes smooth
+// gradients before the 10-bit output write and produces chromatic contours.
 precision highp float;
-#else
-precision mediump float;
-#endif
 
 varying vec2 v_texcoord;
 
